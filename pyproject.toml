@@ -1,0 +1,7 @@
+[project]
+name = "git_evolution"
+version = "0.1.0"
+description = "Visualize your git repository's evolution with interactive Plotly graphs."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["plotly>=6.7.0"]
