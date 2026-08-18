@@ -1,5 +1,5 @@
 from collections import defaultdict
-from typing import Dict, List, Set
+
 
 class EvolutionContext:
     """State context passed through the Chain of Responsibility pipeline."""
@@ -7,8 +7,10 @@ class EvolutionContext:
     def __init__(self) -> None:
         """Initializes the context tracking variables."""
         self.raw_log: str = ""
-        self.dates_set: Set[str] = set()
-        self.sorted_dates: List[str] = []
-        self.data_by_ext: Dict[str, Dict[str, int]] = defaultdict(lambda: defaultdict(int))
-        self.cumulative_series: Dict[str, List[int]] = {}
+        self.repo_name: str = ""
+        self.commit_count: int = 0
+        self.dates_set: set[str] = set()
+        self.sorted_dates: list[str] = []
+        self.data_by_ext: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+        self.cumulative_series: dict[str, list[int]] = {}
         self.plotly_div: str = ""
